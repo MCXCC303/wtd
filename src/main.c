@@ -1,3 +1,7 @@
+/*
+  Copyright (C) 2024 MCXCC
+*/
+
 #include "builtin.h"
 #include <stdio.h>
 #include <string.h>

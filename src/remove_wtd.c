@@ -1,3 +1,9 @@
+/*
+  wtd remove command
+
+  Copyright (C) 2024 MCXCC
+*/
+
 #include "builtin.h"
 #include <dirent.h>
 #include <stdio.h>

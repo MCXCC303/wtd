@@ -1,3 +1,9 @@
+/*
+  wtd version command
+
+  Copyright (C) 2024 MCXCC
+*/
+
 #include "builtin.h"
 #include <stdio.h>
 

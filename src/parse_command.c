@@ -1,3 +1,9 @@
+/*
+  wtd parser
+
+  Copyright (C) 2024 MCXCC
+*/
+
 #include "builtin.h"
 
 struct cmd_struct *parse_primary_command(int argc, const char **argv,

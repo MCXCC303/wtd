@@ -1,3 +1,9 @@
+/*
+  wtd builtins
+
+  Copyright (C) 2024 MCXCC
+*/
+
 #ifndef BUILTIN_H
 #define BUILTIN_H
 
