@@ -17,13 +17,13 @@ const char *wtd_intro_string = "wtd -- What To Do\n";
 const char *wtd_usage_string = "Usage: wtd [-h | --help] [-v | --version]\n";
 const char *wtd_help_string =
     "Commands:\n"
+    "\tconfig\t\tshow and modify wtd config\n"
     "\thelp\t\tsee wtd helps\n"
     "\tinit\t\tinitiate a to-do list\n"
     "\trename\t\trename current to-do list\n"
     "\tremove\t\tremove current to-do list\n"
-    "\tshow\t\tshow what to do in schedule\n"
     "\ttype\t\tshow and modify to-do types in typelist\n"
-    "\ttd\t\tadd a new to-do\n"
+    "\ttd\t\tshow and modify to-do list\n"
     "\tversion\t\tshow wtd version\n";
 
 struct tm *get_current_time() {
@@ -42,7 +42,6 @@ char *get_wtd_name() {
   FILE *fp = fopen(".wtd/conf/wtd.cfg", "r");
   fscanf(fp, "name=%s", (char *)wtd_name);
   fclose(fp);
-  free(wtd_name);
   return wtd_name;
 }
 

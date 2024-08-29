@@ -1,3 +1,5 @@
 .vscode/
 build/
 .idea/
+src/build/
+src/.wtd/

@@ -7,12 +7,12 @@ add_executable(wtd
         main.c
         builtin.c
         builtin.h
+        config.c
         help.c
         init_wtd.c
         parse_command.c
         rename.c        
         remove_wtd.c
-        show.c
         td.c
         type.c
         version.c

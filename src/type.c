@@ -60,6 +60,7 @@ int cmd_type_add(int argc, const char **argv) {
   printf("Created new to-do type named \"%s\".\n", argv[3]);
   return 0;
 }
+
 int cmd_type_remove(int argc, const char **argv) {
   if (argv[3] == NULL) {
     printf("A type name needed.\n\n%s", wtd_type_help_string);
@@ -85,6 +86,7 @@ int cmd_type_remove(int argc, const char **argv) {
   printf("No wtd type named \"%s\"\n", argv[3]);
   return 0;
 }
+
 int cmd_type_list(int argc, const char **argv) {
   FILE *fp_type_list = fopen(".wtd/type/typelist", "r");
   printf("*** WTD TYPE LIST ***\n");

@@ -11,15 +11,16 @@
 #include <time.h>
 #include <unistd.h>
 
-#define WTD_VERSION "v0.0.1"
-#define SUCC_PARSED(X) !strcmp(cmd_set[i].cmd, argv[X])
-#define INVALID_CMD NULL
+#define PRIMARY_CMD 1
+#define SECONDARY_CMD 2
 #define MAX_WTD_NAME_LENGTH 256
+#define REGISTER_ADD_TYPE 'a'
+#define REGISTER_REMOVE_TYPE 'r'
+#define WTD_VERSION "v0.0.1"
+#define INVALID_CMD NULL
 #define WTD_NOT_EXIST !detected_file(".wtd/conf/wtd.cfg")
 #define DETECTED_WTD detected_file(".wtd/conf/wtd.cfg")
-
-#define REGISTER_REMOVE_TYPE 'r'
-#define REGISTER_ADD_TYPE 'a'
+#define SUCC_PARSED(X) !strcmp(cmd_set[i].cmd, argv[X])
 
 extern const char *wtd_intro_string;
 extern const char *wtd_usage_string;
@@ -69,18 +70,27 @@ char *get_wtd_name();
 int detected_file(const char *path);
 
 // Primary command sets
+int cmd_config(int argc, const char **argv);
 int cmd_help(int argc, const char **argv);
 int cmd_init(int argc, const char **argv);
 int cmd_rename(int argc, const char **argv);
 int cmd_remove(int argc, const char **argv);
-int cmd_show(int argc, const char **argv); //
-int cmd_todo(int argc, const char **argv); //
-int cmd_type(int argc, const char **argv); //
+int cmd_td(int argc, const char **argv); //
+int cmd_type(int argc, const char **argv);
 int cmd_version(int argc, const char **argv);
 
-// Type command sets
+// config command sets
+int cmd_config_show(int argc, const char **argv);
+int cmd_config_edit(int argc, const char **argv); //
+
+// td command sets
+int cmd_td_add(int argc, const char **argv);    //
+int cmd_td_show(int argc, const char **argv);   //
+int cmd_td_remove(int argc, const char **argv); //
+
+// type command sets
 int cmd_type_add(int argc, const char **argv);
-int cmd_type_remove(int argc, const char **argv);
 int cmd_type_list(int argc, const char **argv);
+int cmd_type_remove(int argc, const char **argv);
 
 #endif // BUILTIN_H

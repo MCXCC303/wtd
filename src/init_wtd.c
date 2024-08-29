@@ -26,6 +26,7 @@ int cmd_init(int argc, const char **argv) {
     printf("Already existed to-do list named \"%s\".\n"
            "Use \"wtd rename\" to rename this to-do list.\n",
            exist_wtd_name);
+    free(exist_wtd_name);
     return 0;
   }
 

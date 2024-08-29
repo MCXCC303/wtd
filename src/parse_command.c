@@ -9,7 +9,7 @@
 struct cmd_struct *parse_primary_command(int argc, const char **argv,
                                          struct cmd_struct *cmd_set) {
   for (int i = 0; cmd_set[i].cmd; i++) {
-    if (SUCC_PARSED(1)) {
+    if (SUCC_PARSED(PRIMARY_CMD)) {
       cmd_set[i].fn(argc, argv);
       return &cmd_set[i];
     }
@@ -20,7 +20,7 @@ struct cmd_struct *parse_primary_command(int argc, const char **argv,
 struct cmd_struct *parse_secondary_command(int argc, const char **argv,
                                            struct cmd_struct *cmd_set) {
   for (int i = 0; cmd_set[i].cmd; i++) {
-    if (SUCC_PARSED(2)) {
+    if (SUCC_PARSED(SECONDARY_CMD)) {
       cmd_set[i].fn(argc, argv);
       return &cmd_set[i];
     }

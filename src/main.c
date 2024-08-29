@@ -7,8 +7,8 @@
 #include <string.h>
 
 static struct cmd_struct commands[] = {
-    {"help", cmd_help},     {"init", cmd_init},       {"rename", cmd_rename},
-    {"remove", cmd_remove}, {"show", cmd_show},       {"td", cmd_todo},
+    {"config", cmd_config}, {"help", cmd_help},       {"init", cmd_init},
+    {"rename", cmd_rename}, {"remove", cmd_remove},   {"td", cmd_td},
     {"type", cmd_type},     {"version", cmd_version},
 };
 
